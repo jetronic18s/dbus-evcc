@@ -138,8 +138,8 @@ class DbusEvccChargerService:
             # get data from evcc
             config = self._getConfig()
             lpInstance = int(config['DEFAULT']['LoadpointInstance'])
-            data = self._getEvccChargerData()
-            result = data["result"]
+            result = self._getEvccChargerData()
+            #result = data["result"]
             loadpoint = result["loadpoints"][lpInstance]
 
             # send data to DBus
